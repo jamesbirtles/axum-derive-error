@@ -1,7 +1,14 @@
 [package]
 name = "axum-derive-error"
+description = "Proc macro to derive IntoResponse for errors for use with axum"
 version = "0.1.0"
 edition = "2021"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/jamesbirtles/axum-derive-error"
+documentation = "https://docs.rs/axum-derive-error"
+readme = "README.md"
+keywords = ["axum", "error"]
+categories = ["web-programming"]
 
 [lib]
 proc-macro = true
@@ -10,3 +17,10 @@ proc-macro = true
 syn = "1"
 quote = "1"
 proc-macro2 = "1"
+
+# For the example
+[dev-dependencies]
+axum = "0.5"
+serde_json = "1"
+tracing = "0.1"
+sqlx = { version = "0.6", features = ["runtime-tokio-rustls"] }
